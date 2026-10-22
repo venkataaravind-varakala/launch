@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miracle Collections - Official Website Launch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+<body>
+
+    <!-- Celebration VFX Canvases -->
+    <canvas id="particles-canvas"></canvas>
+    <canvas id="fireworks-canvas"></canvas>
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- Ambient Lighting Glow -->
+    <div id="ambient-light" class="ambient-light"></div>
+    
+    <!-- Flash on Launch -->
+    <div id="flash-overlay"></div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Minimal Executive Header -->
+        <header class="top-bar">
+            <div class="brand-indicator">
+                <img src="logo.jpg" alt="Miracle Collections" class="brand-mini-logo">
+                <div>
+                    <div class="brand-title">MIRACLE COLLECTIONS</div>
+                    <div class="brand-sub">Official Website Launch</div>
+                </div>
+            </div>
+
+            <div class="system-telemetry">
+                <div class="status-badge standby" id="system-status-badge">
+                    <span class="pulse-dot"></span> READY TO LAUNCH
+                </div>
+                <div class="status-badge hide-mobile">
+                    <span>🔒 SSL SECURED</span>
+                </div>
+                <div class="status-badge hide-mobile">
+                    <span>⚡ CDN ACTIVE</span>
+                </div>
+            </div>
+
+            <div class="top-controls">
+                <button class="icon-btn" id="mute-toggle-btn" title="Toggle Sound">🔊</button>
+                <button class="icon-btn" id="fullscreen-btn" title="Fullscreen Presentation">⛶</button>
+                <button class="icon-btn" id="settings-btn" title="Settings">⚙️</button>
+            </div>
+        </header>
+
+        <!-- Main Presentation Area -->
+        <main class="main-content">
+            
+            <!-- VIEW 1: Launch Pedestal -->
+            <section id="launch-ready-view" class="launch-view">
+                
+                <!-- Official Logo Badge -->
+                <div class="logo-wrapper">
+                    <div class="logo-ring"></div>
+                    <img src="logo.jpg" alt="Miracle Collections Logo" class="brand-emblem">
+                </div>
+
+                <h1 class="brand-hero-title">MIRACLE COLLECTIONS</h1>
+                <p class="brand-tagline">Online & Offline Clothing Store • Wholesale & Retail</p>
+
+                <!-- Modern Luxury Launch Button -->
+                <div class="launch-button-container">
+                    <button id="launch-button" class="btn-launch-main">
+                        <span class="btn-pulse-ring"></span>
+                        <span class="btn-icon">🚀</span>
+                        <span class="btn-text">LAUNCH WEBSITE</span>
+                        <span class="btn-subtext">Click to start 10s countdown</span>
+                    </button>
+                </div>
+
+                <div class="target-url-preview">
+                    Target: <a href="https://www.miraclecollection.co.in/" target="_blank">www.miraclecollection.co.in</a>
+                </div>
+
+            </section>
+
+            <!-- VIEW 2: 10-Second Countdown Stage -->
+            <section id="countdown-view" class="countdown-view">
+                
+                <div class="countdown-dial">
+                    <svg class="countdown-svg" viewBox="0 0 320 320">
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFFDF0" />
+                                <stop offset="50%" stop-color="#FFD700" />
+                                <stop offset="100%" stop-color="#B8860B" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Background ring -->
+                        <circle class="countdown-meter-bg" cx="160" cy="160" r="140"></circle>
+                        <!-- Progress ring -->
+                        <circle id="countdown-meter-bar" class="countdown-meter-bar" cx="160" cy="160" r="140"></circle>
+                    </svg>
+
+                    <div class="countdown-number-box">
+                        <div id="countdown-number" class="countdown-number">10</div>
+                        <div class="countdown-unit">SECONDS</div>
+                    </div>
+                </div>
+
+                <div class="countdown-status-card">
+                    <div id="countdown-status-text" class="countdown-status-text">
+                        Initializing Miracle Collections Cloud Deployment...
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- VIEW 3: Live Website Celebration Stage -->
+            <section id="celebration-view" class="celebration-view">
+                
+                <div class="celebration-card">
+                    <div class="celebration-badge">✨</div>
+                    <h2 class="celebration-headline">CONGRATULATIONS!</h2>
+                    <h3 class="celebration-subheadline">Miracle Collections is Officially Live</h3>
+                    <p class="celebration-description">
+                        Your website has been successfully deployed to the world.
+                    </p>
+
+                    <!-- Giant Prominent Live Website Button -->
+                    <div class="live-action-box">
+                        <a id="enter-site-button" href="https://www.miraclecollection.co.in/" target="_blank" class="btn-enter-website">
+                            <span>VISIT LIVE WEBSITE ➔</span>
+                        </a>
+                    </div>
+
+                    <div class="direct-link-display">
+                        <span id="live-url-text">https://www.miraclecollection.co.in/</span>
+                        <button id="copy-url-btn" class="btn-copy">Copy</button>
+                    </div>
+
+                    <!-- Secondary Options -->
+                    <div class="celebration-tools">
+                        <button id="boost-crackers-btn" class="btn-secondary">
+                            <span>💥 Burst More Crackers</span>
+                        </button>
+                        <button id="replay-btn" class="btn-secondary">
+                            <span>🔁 Replay Launch</span>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Clean Footer -->
+        <footer class="footer-bar">
+            <span>Miracle Collections • Official Store Launch</span>
+            <span>www.miraclecollection.co.in</span>
+        </footer>
+
+    </div>
+
+    <!-- Quick Settings Modal -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Launch Settings</h3>
+                <button id="close-settings-btn" class="btn-close">&times;</button>
+            </div>
+            <div class="form-group">
+                <label for="setting-store-url">Website URL</label>
+                <input type="url" id="setting-store-url" value="https://www.miraclecollection.co.in/">
+            </div>
+            <div class="form-group">
+                <label for="setting-duration">Countdown Duration</label>
+                <select id="setting-duration">
+                    <option value="5">5 Seconds</option>
+                    <option value="10" selected>10 Seconds</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button id="save-settings-btn" class="btn-save">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="audio.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
